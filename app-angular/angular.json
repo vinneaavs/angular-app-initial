@@ -25,10 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "mode_modules/bootstrap/dist/css/bootstrap.min.css",
+              "../app-angular/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../app-angular/node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
