@@ -1,3 +1,4 @@
+import { PeopleService } from './../../services/people.service';
 import { Component, OnInit } from '@angular/core';
 import { People } from 'src/app/classes/people';
 
@@ -7,10 +8,13 @@ import { People } from 'src/app/classes/people';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+  //exemplo 3
+  constructor(private peopleService: PeopleService){}
+
   // exemplo 1
   ngOnInit(): void {
     this.numberGenerate();
-    this.listPeople();
+    this.peoples = this.peopleService.listPeople();
     throw new Error('Method not implemented.');
   }
   rnd!: number;
@@ -34,4 +38,8 @@ export class ContentComponent implements OnInit {
     this.namePeople = name
   };
 
+  filterList(input: string): void {
+    this.listPeople();
+    this.peoples = this.peoples.filter(p => p.name.toLowerCase().includes(input.toLowerCase()));
+  }
 }
