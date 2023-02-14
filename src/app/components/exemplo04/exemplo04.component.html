@@ -1,0 +1,14 @@
+<h3>Exemplo 3 - ngFor / Filter / Pipe</h3>
+<input class="form-control" type="text" #content1 (keyup)="(0)" />
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of peoples | sublist : content1.value">
+      <td>{{ p.name | uppercase | namesize }}</td>
+      <td>{{ p.age | ageplus }}</td>
+    </tr>
+  </tbody>
+</table>

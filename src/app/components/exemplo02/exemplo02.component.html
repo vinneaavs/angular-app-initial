@@ -1,0 +1,14 @@
+<h3>Exemplo 2 - ngFor / ngIf</h3>
+<div class="mb-3">
+  <select #list value="" class="form-select" (change)="showName(list.value)">
+    <option value="">SELECIONE</option>
+    <option *ngFor="let i of peoples" [value]="i.name">
+      {{ i.name }} - {{ i.age }}
+    </option>
+  </select>
+</div>
+<div class="mb-3">
+  <div class="alert alert-primary" *ngIf="namePeople">
+    Selected Name: {{ namePeople }}
+  </div>
+</div>

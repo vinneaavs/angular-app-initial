@@ -1,0 +1,20 @@
+
+<h3>Exemplo 3 - ngFor / Filter</h3>
+<input
+  class="form-control"
+  type="text"
+  #content
+  (keyup)="filterList(content.value)"
+/>
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of peoples">
+      <td>{{ p.name | uppercase }}</td>
+      <td>{{ p.age }}</td>
+    </tr>
+  </tbody>
+</table>

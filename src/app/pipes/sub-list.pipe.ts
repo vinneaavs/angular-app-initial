@@ -1,12 +1,12 @@
+import { People } from './../classes/people';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'subList'
+  name: 'sublist'
 })
 export class SubListPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: People[], input: string): People[] {
+    return (!input ? value : value.filter(p => p.name.toLowerCase().includes(input.toLowerCase())));
   }
-
 }
