@@ -14,6 +14,7 @@ import { Exemplo04Component } from './components/exemplo04/exemplo04.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { PrimaryComponent } from './components/primary/primary.component';
+import { ErroComponent } from './components/erro/erro.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PrimaryComponent } from './components/primary/primary.component';
     Exemplo04Component,
     MenuComponent,
     HomeComponent,
-    PrimaryComponent
+    PrimaryComponent,
+    ErroComponent
   ],
   imports: [
     BrowserModule
