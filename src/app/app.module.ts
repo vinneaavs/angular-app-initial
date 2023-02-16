@@ -15,6 +15,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { PrimaryComponent } from './components/primary/primary.component';
 import { ErroComponent } from './components/erro/erro.component';
+import { AppRoutingModule } from './modules/app-routing/app-routing.module';
+import { PeopleFormComponent } from './components/people-form/people-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,10 +34,13 @@ import { ErroComponent } from './components/erro/erro.component';
     MenuComponent,
     HomeComponent,
     PrimaryComponent,
-    ErroComponent
+    ErroComponent,
+    PeopleFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [PrimaryComponent]

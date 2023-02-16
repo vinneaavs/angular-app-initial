@@ -1,0 +1,27 @@
+<div class="bord">
+  <h2 class="text-primary text-center">
+    Dados da Pessoa
+  </h2>
+  <form>
+
+    <div class="mb-3">
+      <label class="form-label">Nome: </label>
+      <input type="text" class="form-control" [(ngModel)]="people.name" name="name" />
+      <span>{{people.name}}</span>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Idade: </label>
+      <input type="number" class="form-control" [(ngModel)]="people.age" name="age" />
+      <span>{{people.age}}</span>
+    </div>
+
+
+    <div class="float-right">
+      <button class="btn btn-secondary" (click)="add(people)">Incluir</button>
+      <button class="btn btn-danger" (click)="close()">Fechar</button>
+    </div>
+
+
+  </form>
+</div>
